@@ -43,7 +43,7 @@ pub struct GroupAffine<P: Parameters> {
     pub x: P::BaseField,
     pub y: P::BaseField,
     #[derivative(Debug = "ignore")]
-    _params: PhantomData<P>,
+    pub _params: PhantomData<P>,
 }
 
 impl<P: Parameters> Display for GroupAffine<P> {
@@ -312,7 +312,7 @@ pub struct GroupProjective<P: Parameters> {
     pub t: P::BaseField,
     pub z: P::BaseField,
     #[derivative(Debug = "ignore")]
-    _params: PhantomData<P>,
+    pub _params: PhantomData<P>,
 }
 
 impl<P: Parameters> PartialEq<GroupProjective<P>> for GroupAffine<P> {
